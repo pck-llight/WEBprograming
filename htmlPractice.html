@@ -1,0 +1,231 @@
+<!DOCTYPE html> <!--웹페이지에 사용된 HTML의 종류와 버전을 지정-->
+<html lang="en">
+<head> <!--헤드: 문서의 머리를 나타내는 태그, 브라우저 화면에 직접적으로 보이지 않지만 숨은 데이터를 정의하는 태그들이 들어간다.-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML연습장</title> <!--페이지 이름-->
+</head>
+<body>
+
+<!-- 글의 제목 h1 ~ h6 -->
+<h1 id="top">HTML 공책</h1>
+<hr> <!--가로로 줄을 긋는 태그 보통 제목, 문단 밑에 사용하여 줄을 나눈다.-->
+<h2>박찬규</h2>
+<hr>
+
+<pre><!-- 안에 적는 모든 내용이 그대로 게시된다. -->
+
+    <h3>HTML 구성요소</h3>
+    <hr>
+    요소(element): 시작태그와 종료태그로 이루어진 HTML 문서의 구성 요소이다.
+    속성(attribute): 요소에 대한 추가적인 정보(색, 크기, 링크등)를 제공한다.
+    *tip* 텍스트는 body태그 안에 특별한 태그 없이 출력 가능하다. 하지만 단락을 사용하지 않으면 전체가 연결 되어 한줄로 표시된다.
+    br태그: 줄바꿈 = enter (HTML코드에서 줄을 바꾼다고 <b>웹페이지에서 적용되진 않는다.</b>)
+    hr태그: 가로줄을 긋는다.
+    pre태그: 프로그래머가 입력한 그대로(엔터도 적용) 출력된다. P.S.이설명을 적으면서 사용하고 있는 태그
+
+    <h3>텍스트 서식</h3><hr>
+    b태그: <b>볼드</b>
+    i태그: <i>이탤릭체</i>
+    strong태그: <strong>텍스트를 강하게 표시한다.</strong>
+    em태그: <em>텍스트를 강조한다.</em>
+    code태그: <code>코드임을 나타냄</code>
+    sup태그: 글자<sup>위첨자</sup>
+    sub태그: 글자<sub>아래첨자</sub>
+    <hr>
+
+    <h3>서식문자</h3><hr>
+    (&는 붙여쓴다.)
+    & nbsp; : 공백문자 1개
+    & lt; : <
+    & gt; : >
+    & quot; : "
+    & amp; : &
+    <hr>
+</pre>
+
+<h3>리스트</h3><hr>
+<!-- 리스트: 항목들을 나열할 때 사용된다. -->
+
+<!-- 번호 없는 리스트 -->
+<ul>
+    <li>강아지</li>
+    <li>cat</li>
+    <li>bird</li>
+</ul>
+<!-- 번호 있는 리스트 -->
+<ol>
+    <li>dog</li>
+    <li>cat</li>
+    <li>bird</li>
+</ol>
+
+<!-- 번호 있는 리스트 숫자 변형-->
+<ol start="i" >
+    <li>dog</li>
+    <li>cat</li>
+    <li>bird</li>
+</ol>
+
+<!-- 정의 리스트(defnition list): 항목들과 함께 항목들의 정의(설명)가 표시되는 리스트 -->
+<!-- dl태그 : 정의 리스트 생성, dt태그: 단어 넣는 태그, dd태그: 정의 넣는 태그-->
+<dl>
+    <dt>에스프레소</dt>
+    <dd>-커피의 기본, 커피 원액이다.</dd>
+    <dt>아메리카노</dt>
+    <dd>-에스프레소에 물을 넣은 것</dd>
+</dl>
+<hr>
+
+<h3>이미지 삽입</h3>
+<hr>
+<!-- 이미지 태그 -->
+<!--
+    src => 소스, width => 폭, height => 높이,
+    alt => 이미지가 표현 되지 못할때 나오는 문구
+-->
+
+<!-- 내부 파일 삽입 (경로 적기) -->
+<img src="./timeList.jpg" alt="시간표" width="350" height="400">
+
+<!-- 절대 주소 사용하기 ex)웹브라우저에 있는 이미지 -->
+<img src="https://img.hani.co.kr/imgdb/original/2007/1227/68227042_20071227.jpg" width="300" height="300">
+<hr>
+
+<h3>하이퍼 링크(링크)</h3>
+<hr>
+
+<!-- 하이퍼링크 : 다른 문서로 점프할 수 있는 단어나 이미지 -->
+
+<a href="https://sunrint.sen.hs.kr/">선린인고 사이트</a><br><br>
+
+<!--타겟 태그를 사용하면 어디에서 링크가 열릴지 정할 수 있다.-->
+<!--
+_blank 새창에서 페이지를 연다.
+_slef 현재 윈도우에서 페이지를 연다.
+_parent 부모 페이지에 페이지를 적재한다.
+_top 현재 윈도우 에서 페이지를 적재하고 모든 프레임을 취소한다.
+-->
+
+<a href="https://sunrint.sen.hs.kr/" target="_blank">선린인고 사이트 _blank 타겟 사용</a>
+<br>
+<a href="https://sunrint.sen.hs.kr/" target="_self">선린인고 사이트 _self 타겟 사용</a>
+<br>
+<a href="https://sunrint.sen.hs.kr/" target="_parent" >선린인고 사이트 _parent 타겟 사용</a>
+<br>
+<a href="https://sunrint.sen.hs.kr/" target="_top">선린인고 사이트 _top 타겟 사용</a>
+
+<hr>
+<h3>id 속성</h3>
+<hr>
+
+<!--앞에 있는 태그 안에 id 태그를 추가하고 a 태그를 사용해서 이동한다. (같은페이지 내에섣 점프 가능)-->
+<a href="#top">가장 위로 가기</a>
+
+<hr>
+
+<h3>테이블(표)</h3>
+<hr>
+<!--
+table 태그 : 표를 만들겠다.
+tr 태그 : 행을 만든다.
+th 태그 : td 태그와 구분하기 위해 있는 태그 보통 범주나 카테고리를 쓴다.
+td 태그 : 엽에 하나씩 내용을 추가한다.
+caption 태그 : 표 제목 같은거 입력할때 쓴다.
+테이블 태그는 표를 만들때 행을 만들고 열을 하나하나 삽입하는 형태로 되어있다. 헷갈리지 말자
+-->
+<table border="1"><!-- border 태그: 보통은 CSS에서 사용되기 때문에 사용하지 않지만 바로 보기 이해 사용했다.-->
+    <tr>
+        <th>카테고리</th>
+        <td>내용1</td>
+        <td>내용2</td>
+    </tr>
+    <tr>
+        <th>카테고리</th>
+        <td></td>
+        <td>내용2</td>
+    </tr>
+</table>
+<hr>
+<h4>표 안에 이미지 넣기</h4>
+<table border="1">
+    <caption>시간표에 사진넣기</caption>
+    <tr>
+        <th>사진 1</th>
+        <th>사진 2</th>
+    </tr>
+    <tr>
+        <td><img src="timeList.jpg" width="300" height="320"></td>
+        <td><img src="timeList.jpg" width="300" height="320"></td>
+
+    </tr>
+</table>
+<hr>
+<h4>셀 병합하기</h4>
+<!--
+위치 : td, th 뒤
+colspan : 열 병합
+rowspan : 행 병합
+한 테그 안에 같이 쓰면 동시에 결합된다.
+병합 후 남은 태그들을 지워주어야 쓰레기 셀이 남지 않는다.
+그리고 병합 할때 자신의 칸수도 포함해 병함해야 하고 다섯칸중 앞의 3칸이 병합 되어있다면 뒤에서 2칸만 병합 해주면 된다.(스택)
+-->
+
+<table border="1">
+    <tr>
+        <th colspan="3">카테고리1</th>
+    </tr>
+    <tr>
+        <th>카테고리2</th>
+        <td>내용1</td>
+        <td rowspan="3">내용2</td>
+    </tr>
+    <tr>
+        <th>카테고리3</th>
+        <td>내용1</td>
+    </tr>
+    <tr>
+        <th>카테고리4</th>
+        <td>내용1</td>
+    </tr>
+</table>
+
+<hr>
+<h3>비디오, 오디오</h3>
+<hr>
+<h4>비디오</h4>
+<!--
+autoplay : 자동재생(muted와 함꼐 쓰임)
+controls : 사용자가 쓸수있는 컨트롤 바가 생긴다.
+loop : 반복재생
+poster : 비디오가 로딩 될동안 표시하는 이미지
+preload : 사용자가 비디오를 사용하지 않아도 전체 비디오를 미리 다운로드한다.
+muted : 소리 끄기
+src : 비디오가 존재하는 URL을 지정하거나 파일을 지정한다.
+width, hright : 너비, 높이 지정
+-->
+<video src="./KakaoTalk_20230403_001023965.mp4" controls autoplay muted width="300" height="150">
+    지원하지 않는 비디오 형식입니다.
+</video>
+
+<!--
+비디오 형식을 여러개 넣어서 어떤 상황이라도 출력이 되게 하고 싶다면
+첫태그, 끝태그 사이에 source 태그를 이용해 형식을 지정해주면 된다.
+ex) <source src="mp4, ogg, webm확장자가 가능하다"
+-->
+
+<h4>오디오</h4>
+<!--
+autoplay : 자동재생(muted와 함꼐 쓰임)
+controls : 사용자가 쓸수있는 컨트롤 바가 생긴다.
+loop : 반복재생
+preload : 사용자가 비디오를 사용하지 않아도 전체 비디오를 미리 다운로드한다.
+volume : 소릿값을 설정한다. 0.0~1.0
+src : 비디오가 존재하는 URL을 지정하거나 파일을 지정한다.
+-->
+<audio src="./background-loop-funky-02-2487.mp3" autoplay controls loop></audio>
+
+
+</body>
+</html>
