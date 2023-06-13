@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css_flex_2.css">
+    <style>
+        .container{
+            height: 100px;
+            width: 200px;
+            background-color: aqua;
+            display: flex;
+
+        }
+        .item{
+            width: 20px;
+        }
+        .item:nth-child(1){
+            background-color: aquamarine;
+            /* order: 4; */
+            flex-grow: 1;
+            /* flex-grow는 남는 여백을 비율로 각각 나눠줌
+                flew-shrink는 넘어간 부분을 비율대로 각각 빼줌 
+                처음부터 정해주려면 flex-basis를 이용해서 퍼센테이지를 정해줌*/
+            
+        }
+        .item:nth-child(2){
+            background-color: blue;
+            /* order: 2; */
+            flex-grow: 2;
+        }
+        .item:nth-child(3){
+            background-color: fff;
+            /* order: 3; */
+            flex-grow: 3;
+
+        }
+        .item:nth-child(4){
+            background-color: green;
+            /* order: 1; */
+            flex-grow: 4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>
