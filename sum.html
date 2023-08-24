@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #numprint{
+            background-color: pink;
+        }
+        button{
+            border: coral 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>버튼을 누르면 문자가 나타납니다</h1>
+    <h1>추가기획:계산을 실수형으로 변경하고 곱한값을 출력 할 수 있도록 만들었다.</h1>
+    <h1 id="numprint">합계출력부분</h1>
+    <h1 id="strprint">이름출력부분</h1>
+    <h1 id="productprint">곱한 값 출력부분</h1>
+    <button onclick="numprint()">더하기 결과</button>
+    <button onclick="strprint()">이름 출력</button>
+    <button onclick="product()">곱하기 결과</button>
+    
+    <script>
+        let num1 = parseFloat(prompt("첫번째 숫자입력"));
+        let num2 = parseFloat(prompt("두번째 숫자입력"));
+        let name = prompt("이름을 입력해주세요");
+
+        let sum = num1 + num2;
+
+        let gop = num1 * num2;
+        
+        function numprint(){
+            document.getElementById("numprint").innerHTML = sum;
+        }
+        function strprint(){
+            document.getElementById("strprint").innerHTML = name;
+        }
+        function product(){
+            document.getElementById("productprint").innerHTML = gop;
+        }
+    </script>
+</body>
+</html>
