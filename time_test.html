@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 10px;
+            margin: 0px;
+        }
+        h1{
+        color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="time"></h1>
+    <h1 id="msg"></h1>
+    <img
+    id="img"
+    width="200px"
+    height="200px"
+    >
+    <script>
+        let time = new Date().getHours();
+        let msg;
+        let imgsrc;
+
+        document.getElementById("time").innerHTML = "time = " + time;
+
+        if(time < 12){
+            msg = "Good Morning";
+            imgsrc = "https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamRTIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f58db6031cb325cfbaf366a330cf78148c0444a/Sun.png?disposition=inline"
+        } else{
+            msg = "Good Afternoon";
+            imgsrc = "https://i.pinimg.com/736x/dc/d8/2b/dcd82bca6b55dd71216778addc75e15c.jpg"
+        }
+        document.getElementById("msg").innerHTML = msg;
+        document.getElementById("img").src = imgsrc
+
+        
+    </script>
+</body>
+</html>
