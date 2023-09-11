@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id">다음 학습내용은 HTML입니다.</p>
+    <button onclick="myfun()">학습이 끝나면 눌러주세요.</button>
+    <script>
+        function myfun(){
+            let text = document.getElementById("id").innerHTML;
+            document.getElementById("id").innerHTML = text.replace("HTML", "javascript");
+        }
+    </script>
+</body>
+</html>
