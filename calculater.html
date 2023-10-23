@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            margin: 5px;
+            padding: 15px;
+            scale: 40px;
+        }
+    </style>
+    <script>
+        // parseInt(num1); 
+        // parseInt(num2); 
+        
+        function add() {
+            let num1 = parseFloat(document.getElementById("number1").value);
+            let num2 = parseFloat(document.getElementById("number2").value);
+            document.getElementById("result").value = num1+num2;
+        }
+        function sub() {
+            let num1 = parseFloat(document.getElementById("number1").value);
+            let num2 = parseFloat(document.getElementById("number2").value);
+            document.getElementById("result").value = num-num2;
+        }
+        function times() {
+            let num1 = parseFloat(document.getElementById("number1").value);
+            let num2 = parseFloat(document.getElementById("number2").value);
+            document.getElementById("result").value = num*num2;
+        }
+        function divide() {
+            let num1 = parseFloat(document.getElementById("number1").value);
+            let num2 = parseFloat(document.getElementById("number2").value);
+            document.getElementById("result").value = num/num2;
+        }
+    </script>
+</head>
+<body>
+    숫자 1: <input type="text" id="number1" value="9"><br>
+    숫자 2: <input type="text" id="number2" value="6"><br>
+    <input type="button" value="+" onclick="add()" class="button">
+    <input type="button" value="-" onclick="sub()" class="button">
+    <input type="button" value="*" onclick="times()" class="button">
+    <input type="button" value="/" onclick="di()" class="button"><br>
+    연산결과: <input type="text" id="result" value="0">
+</body>
+</html>
