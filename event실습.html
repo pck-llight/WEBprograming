@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="target" style="height: 70px; width: 250px; background-color: yellow;">마우스를 올려주세요!</div>
+
+    <script>
+        let x = document.getElementById('target').addEventListener("mouseover", ()=>{
+            document.getElementById("target").innerHTML ="감사맨이얀"
+            document.getElementById("target").style.cssText = "background-color: skyblue"
+        })
+        x = document.getElementById('target').addEventListener("!mouseover", ()=>{
+            document.getElementById("target").innerHTML ="감사맨이얀"
+            document.getElementById("target").style.cssText = "background-color: skyblue"
+        })
+    
+        // x.onmouseover = () => {
+        //     x.innerHTML = "감사합니둥"
+        // }
+        </script>
+</body>
+</html>
