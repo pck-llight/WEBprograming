@@ -1,0 +1,73 @@
+<html>
+  <head>
+       
+    <script>
+      var cnt = 0;
+      function cal() {
+        alert(cnt + "개의 문제를 맞췄습니다.");
+        // let answer = document.getElementById("answer").value;
+        // let s = document.getElementById("problem").value;
+        // let solution = eval(s);
+
+        // if (solution == answer) {
+        //   alert("정답입니다.");
+        // } else {
+        //   alert("틀렸습니다! 정답은" + solution);
+        // }
+      }
+
+      //정답이 맞는지 체크하고 카운트 해주는 함수
+      function check1() {
+        let answer1 = document.getElementById("answer1").value;
+        let s = document.getElementById("problem1").value;
+        let solution = eval(s);
+
+        if (answer1 == solution) {
+          cnt++;
+          document.getElementById("answer1").value = "확인 되었습니다.";
+        }
+      }
+      function check2() {
+        let answer2 = document.getElementById("answer2").value;
+        let s = document.getElementById("problem2").value;
+        let solution = eval(s);
+
+        if (answer2 == solution) {
+          cnt++;
+          document.getElementById("answer2").value = "확인 되었습니다.";
+        }
+      }
+
+      function check3() {
+        let answer3 = document.getElementById("answer3").value;
+        let s = document.getElementById("problem3").value;
+        let solution = eval(s);
+
+        if (answer3 == solution) {
+          cnt++;
+          document.getElementById("answer3").value = "확인 되었습니다.";
+        }
+      }
+    </script>
+  </head>
+  <body>
+           
+    <h1>Math Quiz1</h1>
+            <input type="text" id="problem1" value="12*2+20-30" /><br />
+            <input type="text" id="answer1" />
+    <button onclick="check1()">제출</button>
+
+    <h1>Math Quiz2</h1>
+            <input type="text" id="problem2" value="10*4+7-18" /><br />
+            <input type="text" id="answer2" />
+    <button onclick="check2()">제출</button>
+
+    <h1>Math Quiz3</h1>
+            <input type="text" id="problem3" value="3*3*3*3" /><br />
+            <input type="text" id="answer3" />
+    <button onclick="check3()">제출</button>
+
+    <!-- 몇개의 문제를 맞췄는지 출력 -->
+    <button onclick="cal()">정답 확인</button>
+  </body>
+</html>
