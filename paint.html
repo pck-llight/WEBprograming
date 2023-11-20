@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        button{
+            padding: 10px;
+            border: dotted 2px black;
+            border-radius: 5%;
+            transition: transform 0.5s;
+            :hover{
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<style>
+    #myCanvas {
+        background-color: rgb(252, 249, 249);
+        border: 1px dotted blue;
+    }
+</style>
+
+<body>
+<input type="color" id="colorPicker" value="#000000">
+<button onclick="changeThickness(1);">얇게</button>
+<button onclick="changeThickness(3);">보통</button>
+<button onclick="changeThickness(5);">굵게</button>
+<button onclick="changeThickness(8);">더 굵게</button>
+<button onclick="changeThickness(12);">매우 굵게</button>
+<button onclick="clearCanvas();">화면 지우기</button><br>
+<canvas id="myCanvas" width="1200" height="800"></canvas>
+
+<script>
+  let canvas = document.getElementById("myCanvas");
+  let context = canvas.getContext("2d");
+  let last_x = 0, last_y = 0;
+  let draw_mode = false;
+  let thickness = 3; // 초기 선 두께 설정
+
+  // 컬러 피커 엘리먼트 가져오기
+  let colorPicker = document.getElementById("colorPicker");
+
+  // 초기 스트로크 스타일 설정
+  context.strokeStyle = colorPicker.value;
+  context.lineWidth = thickness; // 선 두께 설정
+
+  // 컬러 피커 값이 변경될 때마다 스트로크 스타일 업데이트
+  colorPicker.addEventListener("input", function () {
+    context.strokeStyle = colorPicker.value;
+  });
+
+  function clearCanvas() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  function changeThickness(value) {
+    thickness = value;
+    context.lineWidth = thickness;
+  }
+
+  canvas.addEventListener("mousemove", function (event) {
+    if (!draw_mode) return;
+    let x = event.offsetX;
+    let y = event.offsetY;
+    context.lineTo(x, y);
+    context.stroke();
+    last_x = x;
+    last_y = y;
+  });
+
+  canvas.addEventListener("mousedown", function (event) {
+    last_x = event.offsetX;
+    last_y = event.offsetY;
+    context.beginPath();
+    context.moveTo(last_x, last_y);
+    draw_mode = true;
+  });
+
+  canvas.addEventListener("mouseup", function (event) {
+    draw_mode = false;
+  });
+
+  canvas.addEventListener("mouseout", function (event) {
+    draw_mode = false;
+  });
+</script>
+</body>
+
+</html>
